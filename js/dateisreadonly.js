@@ -1,10 +1,4 @@
 
-var head="<script src='https://yyk1024.github.io/yyk.github.io/js/jquery-1.12.4.js'></script><script src='https://yyk1024.github.io/yyk.github.io/js/jquery-ui.js'></script><link rel='stylesheet' href='https://yyk1024.github.io/yyk.github.io/js/jquery-ui.css'> <script>    $(function () {            $('#ctl00_ContentPlaceHolder1_radDPIncidentDate').datepicker(   {    changeMonth: true,   changeYear: true,   dateFormat: 'yy/mm/dd'   });        });    </script>";
-
-$('head').append(head); 
-
-
-
 
 Date.prototype.format = function(fmt) {
     var o = {
