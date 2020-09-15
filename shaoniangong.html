@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://bm.5tree.cn/signing.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>天津市少年宫网上报名平台</title>
+		<link href="./天津市少年宫网上报名平台1_files/base.css" rel="stylesheet" type="text/css">
+		<script>
+			document.oncontextmenu=document.onselectstart=document.onpaste=function(e){return false;}
+			document.onkeydown = document.onkeyup = document.onkeypress = function(event) { var e = event || window.event || arguments.callee.caller.arguments[0]; if (e && e.keyCode == 123) {e.returnValue = false; return (false); } }
+		</script>
+		<script src="./天津市少年宫网上报名平台1_files/jquery.min.js"></script>
+		<!-- <script src="./天津市少年宫网上报名平台1_files/ajaxsend.js"></script> -->
+		<!--[if IE 9]>
+		<script src="htmlhack/html5shiv.min.js"></script>
+		<script src="htmlhack/respond.min.js"></script>
+		<script>
+			$(function(){
+				$(".form-item-tip").show();
+			})
+		</script>
+		<![endif]-->
+	</head>
+	<body onpaste="return false">
+		 <div id="header" class="header">
+			 <div class="base-width">
+				 <div class="header-title">天津市少年宫网上报名平台</div>
+				 <div class="header-userInfo" title="退出登录" id="logout">退出</div>
+			 </div>
+		 </div>
+		<div class="oddWrap schoolTitle">
+			 <h1 class="textcenter"><span id="schoolName">null</span><span style="display: block;font-size: 24px;color: #9ab4cb;padding-top: 5px;">(招生人数：<span id="schoolSum">null</span>)</span></h1>
+		</div>
+		 <div class="wrap">
+			 <div class="sign-info  base-width">
+			         <h3>填写确认信息</h3>
+					 <fieldset style="padding: 44px 24px 10px;">
+					 	<!-- <legend>填写确认信息</legend> -->
+						 <div class="form-item">
+							 <div class="form-item-label">幼儿姓名</div>
+							 <div class="form-item-content">
+							 <input type="text" class="input" name="childName" id="childName" maxlength="30" placeholder="请输入幼儿姓名">
+							 <span class="form-item-tip">请输入幼儿姓名</span>
+							 </div>
+						 </div>
+						  <div class="form-item">
+							 <div class="form-item-label">幼儿身份证件号码</div>
+							 <div class="form-item-content">
+								 <input type="text" class="input" maxlength="18" name="childIdentityCard" id="childIdentityCard" placeholder="请输入幼儿身份证件号码">
+							     <span class="form-item-tip">请输入幼儿身份证件号码</span>
+							 </div>
+						 </div>
+						 <div class="form-item">
+							 <div class="form-item-label">报名班级</div>
+							 <div class="form-item-content" id="classList"><label><input type="radio" id="showError" name="classType" value="NaN" data-type="2">中班</label><label><input type="radio" name="classType" value="NaN" data-type="3">大班</label><span class="form-item-tip">请先选择一个班级！</span></div>
+						 </div>
+					 </fieldset>
+                     <h3>家长承诺书(请在文本框输入下列文字内容)</h3>
+					<div class="form-item">
+						 <label style="background: #f8f8f8;padding:20px 10px;display:block;font-size:14px;text-align:center;margin-bottom:36px;" id="agreeText"></label>
+						 <input type="text" id="isAgreen" class="input" maxlength="60" placeholder="请在此输入上方灰框内的内容" style="width:98%">
+						 <div class="form-item-tip tipblock" style="padding-top:10px;font-size:14px;">请输入上方灰框内的内容</div>
+					</div>
+					 <div class="form-item">
+						 <div class="form-item-label">验证码</div>
+						 <div class="form-item-content">
+						 	<input type="text" id="captcha" class="input" maxlength="4" placeholder="请输入右侧验证码">
+						 	<span id="voidN" class="voidnum" title="点击切换验证码">福从临行</span>
+						 	<span style="color:#ccc;padding-left:10px;">点击切换验证码</span>
+						 	<div class="form-item-tip tipblock">请输入右侧验证码</div>
+						 </div>
+					 </div>
+					<div class="form-item">
+						<div class="form-item-content">
+						 <button type="button" class="btn btn-primary" id="toSign">确认资料填写无误并提交报名</button>
+						</div>
+					</div>
+				 </div>
+			 </div>
+		 
+	     <div class="footer">
+			 为保证正常报名，请您使用IE9以上版本、360浏览器、Firefox（火狐浏览器）或Chrome（谷歌浏览器）访问本网站。
+		 </div>
+		 <div id="loadbg" class="load-bg" style="display: none;"></div>
+	
+
+<script type="text/javascript">
+$(function(){
+	//去除错误
+	$("input").focus(function(){
+		$(this).removeClass("input-error");
+		$(this).parent().find(".form-item-error-tip").remove();
+	});
+
+   var schoolId=GetUrlParam("schoolId");
+   $("#agreeText").text(agreeArray[schoolIds.indexOf(schoolId)])
+   //显示报名班级
+   var area=GetUrlParam("area").split("n");//小中大班级ID
+   var classhtml="",numberL=0;
+   for(var i=0;i<3;i++){
+	   if(i==0){
+		var className="预备班",typeHtml="1";
+	   }else if(i==1){
+		var className="中班",typeHtml="2";
+	    }else{
+	    var className="大班",typeHtml="3";
+		}
+	   var classId=Number(area[i]);
+	   if(classId!==0){
+		   numberL+=1;
+		   if(numberL==1){
+			   var idhtml='id="showError"';
+		   }else{
+			   var idhtml='';
+		   }
+		   classhtml+='<label><input type="radio" '+idhtml+' name="classType" value="'+classId+'" data-type="'+typeHtml+'">'+className+'</label>';
+	   }
+   }
+
+   classhtml+='<span class="form-item-tip">请先选择一个班级！</span>';
+   $("#classList").html(classhtml);
+
+	if(navigator.cookieEnabled){
+		$("#schoolName").text(getCookie("schoolName"));
+		$("#schoolSum").text(getCookie("schoolSum"));
+  	}else{
+  	   $("#schoolName").text(sessionStorage.getItem("schoolName"));
+  	   $("#schoolSum").text(sessionStorage.getItem("schoolSum"));
+  	}
+
+   //选择班级类型
+	$("input[name='classType']").change(function(e){
+		$(this).removeClass("input-error");
+		$(this).parent().parent().find(".form-item-error-tip").remove();
+	});
+
+    if(getCookie("nowChild")==null||sessionStorage.getItem("nowChild")){
+ 	   window.location="login.html";
+    };
+
+   //获取当前学校的状态
+   getData("signup/initSignupPage.htm",{schoolId:schoolId},function(data){
+	     dealData(data,null);
+   },"POST");
+
+     //var clickNumber=parseInt(sessionStorage.clickNumber==undefined?0:sessionStorage.clickNumber);
+
+   //获取验证码
+   $("#voidN").click(function(){
+	   if(navigator.cookieEnabled){
+			var clicky=parseInt(getCookie("clickNumber")==undefined?0:getCookie("clickNumber"));
+		}else{
+			var clicky=parseInt(sessionStorage.clickNumber==undefined?0:sessionStorage.clickNumber);
+		}
+		if(parseInt(clicky)>2){
+	   		alert("验证码刷新的太频繁了，请稍后再试！");
+	   		var csum=setInterval(function(){
+	             		clearInterval(csum);
+	             		//sessionStorage.clickNumber=clickNumber=0;
+	             	   if(navigator.cookieEnabled){
+	           			   setCookie("clickNumber",0);
+	           		   }else{
+	           			   sessionStorage.setItem("clickNumber",0);
+	           		   }
+	         	}, 2000);
+	   		return false
+	   	};
+       getData("signup/checkCode.htm",{},function(data){
+           $("#voidN").text(data);
+           //clickNumber+=1;
+           if(navigator.cookieEnabled){
+   				var clickNumber=parseInt(getCookie("clickNumber")==undefined?0:getCookie("clickNumber"));
+	   		}else{
+	   			var clickNumber=parseInt(sessionStorage.clickNumber==undefined?0:sessionStorage.clickNumber);
+	   		}
+           //sessionStorage.clickNumber=clickNumber;
+		   clickNumber+=1;
+		   if(navigator.cookieEnabled){
+			   setCookie("clickNumber",clickNumber);
+		   }else{
+			   sessionStorage.setItem("clickNumber",clickNumber);
+		   }
+
+           var csum=setInterval(function(){
+           	var clickNumber=parseInt(getCookie("clickNumber")||sessionStorage.clickNumber);
+           	clickNumber=clickNumber-1;
+
+			   if(navigator.cookieEnabled){
+				   setCookie("clickNumber",clickNumber);
+			   }else{
+				   sessionStorage.setItem("clickNumber",clickNumber);
+			   }
+
+			   if(clickNumber<=0){
+				   clearInterval(csum);
+				   //sessionStorage.clickNumber=clickNumber=0;
+				   //clickNumber=0;
+				   if(navigator.cookieEnabled){
+					   setCookie("clickNumber",0);
+				   }else{
+					   sessionStorage.setItem("clickNumber",0);
+				   }
+			   }
+
+           	//sessionStorage.clickNumber=clickNumber;
+
+           	/*if(clickNumber<=0){
+           		clearInterval(csum);
+                sessionStorage.clickNumber=clickNumber=0;
+           	}*/
+       	}, 500);
+
+       },"POST");
+   });
+
+   //防止刷新
+   if(navigator.cookieEnabled){
+        var loadNum=parseInt(getCookie("loadnum")==undefined||getCookie("loadnum")=="NaN"?0:getCookie("loadnum"));
+    }else{
+    	var loadNum=parseInt(sessionStorage.loadnum==undefined?0:sessionStorage.loadnum);
+    }
+
+   if(loadNum>3){
+	$("body").html("<div class='itie8'>您刷新的太频繁了，请歇息3秒钟！</div>");
+	var queryR=setInterval(function(){
+		clearInterval(queryR);
+		if(navigator.cookieEnabled){
+			setCookie("loadNum",0);
+		}else{
+			sessionStorage.setItem("loadNum",0);
+		}
+		window.location.reload();
+	}, 3000);
+
+   }else{
+   	getData("signup/checkCode.htm",{},function(data){
+           $("#voidN").text(data);
+           loadNum+=1;
+           //sessionStorage.loadnum=loadNum;
+           if(navigator.cookieEnabled){
+			   setCookie("loadnum",loadNum);
+		   }else{
+			   sessionStorage.setItem("loadnum",loadNum);
+		   }
+
+           var queryR=setInterval(function(){
+           /*	var loadNum=parseInt(sessionStorage.loadnum);
+           	loadNum=loadNum-1;
+           	sessionStorage.loadnum=loadNum;
+           	if(loadNum==0){
+           		clearInterval(queryR);
+				sessionStorage.loadnum=0;
+           	}*/
+
+			   var loadNum=parseInt(loadNum);
+			   loadNum=loadNum-1;
+			   if(navigator.cookieEnabled){
+				   setCookie("loadnum",loadNum);
+			   }else{
+				   sessionStorage.setItem("loadnum",loadNum);
+			   }
+			   if(loadNum==0){
+				   clearInterval(queryR);
+				   clickNumber=0;
+				   if(navigator.cookieEnabled){
+					   setCookie("loadNum",0);
+				   }else{
+					   sessionStorage.setItem("loadNum",0);
+				   }
+			   }
+
+       	}, 500);
+       },"POST");
+   }
+
+   $("#toSign").click(function(){
+	    var errorNumber=0;
+        var childIdentityCard=$("#childIdentityCard").val().replace(/(\s)/g,"").toUpperCase();
+        if(childIdentityCard==""){
+            showErrorTip("childIdentityCard",1);
+            errorNumber+=1;
+		};
+
+		/* var birthday=childIdentityCard.substr(6,4)+"/"+childIdentityCard.substr(10,2)+"/"+childIdentityCard.substr(12,2);
+		var childbirthday=new Date(birthday).getTime();
+
+		if(isNaN(childbirthday)){
+			alert("请输入有效的身份证件号码！");
+            return false;
+		}; */
+
+       /*  if(!isidCard(childIdentityCard)){
+        	showErrorTip("childIdentityCard",2,"请输入有效的身份证号")
+        	errorNumber+=1;
+        }; */
+       var localIDcard=getCookie("nowChild").toUpperCase()==null?sessionStorage.getItem("nowChild").toUpperCase():getCookie("nowChild").toUpperCase();
+        if(localIDcard!==childIdentityCard){
+        	showErrorTip("childIdentityCard",2,"幼儿身份证件号码与预报名填写不一致，请检查");
+        	errorNumber+=1;
+        }
+
+	    var childName=$("#childName").val().replace(/(\s)/g,"");
+	    var nameReg= /^.{2,30}?/
+        if(childName==""){
+            showErrorTip("childName",1);
+            errorNumber+=1;
+        };
+
+        if(nameReg.test(childName) === false) {
+             showErrorTip("childName",2,"请输入2-30位姓名");
+             errorNumber+=1;
+        };
+
+        var classId=$("input[name=classType]:checked").val();
+        if(classId==undefined){
+            showErrorTip("showError",1);
+            errorNumber+=1;
+        };
+        //统一协议
+        var isAgreen=$.trim($("#isAgreen").val());
+
+        if(isAgreen==""){
+             showErrorTip("isAgreen",1);
+             errorNumber+=1;
+         };
+         var test=agreeArray[schoolIds.indexOf(GetUrlParam("schoolId"))];
+         if(isAgreen!==test){
+             showErrorTip("isAgreen",2,"请输入："+test);
+             errorNumber+=1;
+         };
+         //我已详细阅读所报幼儿园招生简章及相关须知要求并承诺所填信息真实有效
+
+		 //验证码
+         var captcha=$("#captcha").val().replace(/(\s)/g,"");
+         if(captcha==""){
+             showErrorTip("captcha",1);
+             errorNumber+=1;
+			}else if(captcha!==$("#voidN").text()){
+         	showErrorTip("captcha",2,"验证码输入错误");
+         	errorNumber+=1;
+         };
+
+         //如果有报错则返回到报错位置
+         if(errorNumber>0){
+         	var height=$(".input-error:eq(0)").offset().top-120;
+         	$('html,body').animate({scrollTop: height}, 500);
+         	return false
+         };
+
+		 var parameter={
+	                "childIdentityCard": childIdentityCard,
+	                "childName":childName,
+				    "schoolId":schoolId,
+					"classId":$("input[name=classType]:checked").val(),
+					"className":$("input[name=classType]:checked").parent().text(),
+					"isAgreen":isAgreen,
+	                "checkCode":captcha,
+	            };
+
+       getData("signup/submit.htm",parameter,function(data){
+    	   dealData(data,function(){
+               window.location="sign_result_success.html";
+    	   });
+
+       },"POST");
+   });
+
+ 	//退出登录
+	$("#logout").click(function(){
+		  //清除cookies或者会话存储
+	  if(navigator.cookieEnabled){
+			 delCookie("childName");delCookie("childIdentityCard");delCookie("insertTime");
+  	  }else{
+  		  sessionStorage.clear();
+  	  };
+  	  getData("signup/logout.htm",{},function(res){
+            if(res.code=="0"){
+				  window.location="login.html";
+            	  return false;
+            } else {
+          	  window.location="sign_result_fail.html";
+            }
+        },"POST");
+	});
+
+});
+function checkBirthday(birthday,min,max){
+	var childbirthday=new Date(birthday).getTime();
+	var minBirthday =new Date(min).getTime();
+	var maxBirthday =new Date(max).getTime();
+	if(childbirthday<minBirthday||childbirthday>maxBirthday){
+		showErrorTip("showError",2,"您的孩子（"+birthday+"）出生日期不在招生年龄段内！（"+min+"~"+max+")");
+    	return false
+	}else{
+		return true
+	};
+}
+var agreeArray=[
+	"我已阅读招生简章了解相关注意事项承诺所填信息真实有效",
+	"我已阅读招生简章知晓招生注意事项保证所填信息真实有效"
+];
+</script>
+</body></html>
