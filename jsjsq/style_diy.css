@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  
+  line-height: 2em;
+}
+
+body {
+ 
+  color: #000;
+	text-align: left;
+  background: #fdfcf8;
+	
+}
+
+a:link,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F00;
+  text-decoration: underline;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+input,
+button,
+select {
+  font: 100% arial, helvetica, clean, sans-serif;
+}
+
+
+img,
+a img {
+  border: 0 none;
+}
+
+em {
+  font-style: normal;
+  color: #F00;
+  margin-right: 6px;
+}
+
+.wrap {
+  width: 800px;
+  margin: 0px auto;
+	
+	background: #fff;
+	border: 8px solid #f1f1f1
+}
+
+.api_result {
+  width: 800px;
+  margin: 0px auto;
+  
+  background: #fff;
+  border: 8px solid #f1f1f1
+}
+
+.header {
+  font-size: 50px;
+  height: 200px;
+  line-height: 200px;
+  color: BB;
+  -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+  -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+  text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+  *filter: Glow(Color=#000, Strength=1);
+}
+
+.cont {
+  
+  height: 180px;
+  line-height: 80px;
+  vertical-align: center;
+  text-align: center;
+
+}
+
+  .head-title-38 {
+    font-size: 38px;
+    
+    height: 200px;
+    
+}
+
+.inputfile{
+
+  
+
+}
+td { width:180px;
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #ccc;
+background-color: #ffffff;
+}
+
+table {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+#order {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  /* margin-top: 10px; */
+  /* padding: 0; */
+  /* border: 3px solid #B88A00; */
+}
+
+.title {
+  height: 36px;
+  line-height: 36px;
+  font-size: 20px;
+  color: #F00;
+  margin-bottom: 13px;
+  
+}
+
+.bdbox {}
+
+.bdbox li {
+  /* width: 100%; */
+	border-bottom: 1px solid #e4e4e4;	
+	padding: 0 10px
+}
+.bdbox li span{
+	padding: 15px 0;
+  *padding: 10px 0 10px;
+  _padding: 10px 0 10px;
+}
+.bdbox li span span{
+	padding: 0
+}
+.bdbox li span span.Validform_checktip,.bdbox li span.Validform_checktip{
+  padding-left: 20px;
+}
+.bdbox li input.dxk {
+  display: block;
+  float: left;
+  width: 15px;
+  height: 15px;
+  color: #F00;
+  padding: 1px 1px 0 0;
+  cursor: pointer;
+  background-color: #E6E6E6;
+}
+
+.bdbox li label {
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  background-color: #F5F5F5;
+  margin-left: 6px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.bdbox li span.bdl {
+  float: left;
+  width: 260px;
+  text-align: left;
+}
+
+.bdbox li span.bdr {
+  float: right;
+  width: 680px;
+  padding-left: 10px;
+  border-left: 1px solid #CCC;
+}
+
+.bdbox li.gaoa {
+  height: 86px;
+}
+
+.bdbox li.gaob {
+  height: 75px;
+}
+
+.bdbox li.gaoc {
+  /* height: 30px; */
+  border: none;
+	text-align: center;
+	padding: 15px 0
+}
+
+.bdbox li.gaod {
+  height: 40px;
+}
+
+.bdbox li.gaoe {
+  height: 63px;
+}
+
+li img {
+  padding-left: 30px;
+	float: left;
+	padding-top: 5px;
+	height: 24px;
+}
+
+.bdbox li span.bdr input.txt,
+table .txt {
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #060;
+	padding: 0 5px;
+	outline: none;
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+}
+
+.bdbox li span.bdr textarea {
+  font-size: 14px;
+  color: #060;
+  height: 120px;
+  padding: 5px;
+  border: none;
+  border: 1px solid #c8c8c8;
+}
+
+.bdbox li input.send {
+  width: 200px;
+  height: 30px;
+  color: #F00;
+}
+
+.bdbox .ts {
+  float: right;
+  text-align: left;
+  width: 310px;
+  line-height: 30px;
+  display: inline;
+  color: #FF5722;
+  text-align: right
+}
+
+.bdbox li.wenjuan {
+  /* height: 160px */
+}
+
+#btn_xx {
+   height: 80px; 
+   width: 150px;
+}
+#jsq {
+   height: 80px; 
+   width: 150px;
+}
+#ql {
+   height: 80px; 
+   width: 150px;
+}
+#szd span.bd1{padding-top: 36px}
+/* PHPORDER end */
+.footer {
+  text-align: center;
+	line-height: 100px;
+	border-top: 5px solid #FF5722;
+	background-color: #fff;
+	margin-top: 20px
+}
+
+#jiating .txt {
+  width: 160px;
+}
+
+#jiating th {
+  border-top: 1px solid #e4e4e4;
+}
+
+#jiating th,
+#jiating td {
+  vertical-align: top;
+  padding: 5px;
+  border-left: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+
+
+
+
+h2 {
+  margin: 15px 0px;
+  color: #b88a00
+}
+
+
+.bdbox li.tip-li{background: #0c77de;
+	color: #fff; padding: 10px 10px}
+	.bdbox li.tip-li span{font-size: 22px; font-weight: bold; margin-right: 30px; }
+	.bdbox li.tip-li small{ font-size: 14px; }
+.bdbox li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.tip-index{
+	padding: 20px;
+    font-size: 16px;
+}
+
+.tip-btn{
+	padding: 12px 45px;
+    margin-top: 18px;
+    border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-bottom: 30px
+}
