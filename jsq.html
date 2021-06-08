@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+   
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+  <link rel="stylesheet" type="text/css" href="./js/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./js/style_diy.css">
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  
+
+
+<title>
+	yyk工具
+</title></head>
+<body>
+ 
+   <div class="wrap">
+       <div align="center" class="header">yyk工具</div>
+       <div class="cont">
+         
+             <p> 
+                <span class="title">点击次数：</span>             
+                <span><input type="text" id="jsq" value=0 /></span>
+                <span><button type="button" id="btn_xx" >点我</button><span>
+            </p> 
+            <p>
+              <span><button type="button" id="ql" >清零</button><span>
+            </p>
+
+       </div>
+      <!--  <div class="cont">
+            <p>
+                <span class="title">检测成分：</span>
+                <span><input class="inputfile" accept=".txt" type="file" id="upload_updateTestInfo"/></span>
+                <span><button type="button" id="btn_cf">上传检测成分</button><span>
+            </p>   
+       </div> 
+       <div  class="cont"><p style="color: red">注：上传数据格式为json，保存成为UTF-8编码格式txt文本。</p>
+       </div> -->
+       
+   </div>
+   <div id="view" class="api_result">
+           
+       </div> 
+
+   <div class="modal fade" id="loadIngModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false"
+     style="top: 25%;">
+   <!--  <div class="modal-dialog modal-dialog-new" style="height: 340px;width: 500px">
+        <div class="modal-content modal-content-new">
+            <div class="com-modal-top">
+
+            </div>
+            <div class="com-modal-close">
+                <div class="modal-close-div" style="" data-dismiss="modal">
+                    <div>&times;</div>
+                </div>
+            </div>
+            <div class="com-modal-loading" align="center">
+                <div class="modal-loading-div">
+                    <p>loading</p>
+                </div>
+                <p class="modal-loading-p">提交中。。。</p>
+                
+            </div>
+        </div>
+    </div> -->
+</div>
+
+   <script>
+     //var inputElement = document.getElementById("upload_updateTestInfo");
+     //inputElement.addEventListener("change", updateTestInfo, false);
+
+     $("#btn_xx").off("click").on("click", function(){
+          
+         var i=$("#jsq").val();
+         i++;
+         $("#jsq").val(i);
+          
+     });
+     $("#ql").off("click").on("click", function(){
+       
+         $("#jsq").val(0);
+          
+     });
+     
+ </script>
+
+</body></html>
