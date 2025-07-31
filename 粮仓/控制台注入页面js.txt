@@ -1,0 +1,23 @@
+1、先注入jq
+var script=document.createElement("script");
+script.src="https://cdn.staticfile.net/jquery/1.10.2/jquery.min.js";
+document.head.appendChild(script);
+
+
+2、注入代码
+script=document.createElement("script");script.append(`$(function() {
+     $("#Image1").click( function (){
+       
+        document.getElementById('divImage1').style.display = 'block';
+        document.getElementById('HiddenFieldScrollPosition').value = window.pageYOffset;
+    });
+
+    $('input[name="w"]').change(function(){
+        $("#Image1").attr("src",$(this).next("img").attr("src"));
+        $(this).attr("checked","checked");
+        document.getElementById('divImage1').style.display = 'none';
+        
+    });
+    
+    $("#Image1").attr("src",$('input[name="w"]').filter(':checked').next("img").attr("src"));
+});`);document.head.appendChild(script);

@@ -1,0 +1,1251 @@
+<html class="pixel-ratio-1 watch-active-state">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="red" />
+	<title>惠三农</title>
+	<link rel="stylesheet" href="../../js/Framework7/css/framework7.ios.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../js/Framework7/css/framework7.ios.colors.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../js/Framework7/css/framework7-icons.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/my-app.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/mob_main.css" />
+	<link rel="stylesheet" type="text/css" href="../slyyQhms/slyy.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/myCred.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/myapp_main.css">
+	<link rel="stylesheet" type="text/css" href="../../css/my-news.css"/>
+	<link rel="stylesheet" href="../../css/verify.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../../css/login.css" />
+	<link rel="stylesheet" href="../../css/slyy_qhmx.css" type="text/css"/>
+	<link rel="stylesheet" href="../../css/yhzx.css" type="text/css"/>
+   
+	<style>.row-custom div[class*="col-"] { background: #fff; text-align: center; color: #000; height: 80px; } .row.no-gutter .col-25 div{ padding-top: 2px; } .row.no-gutter .col-25 p{ margin:0; } #slyyQhmsDataListUL .item-title.title{ font-size: 16px; font-weight: bold; width: 100%; } #slyyQhmsDataListUL .pz{ padding: 1px 4px; color: #007aff; border: 1px solid #007aff; margin-right: 8px; border-radius: 10px; } #slyyQhmsDataListUL .pz.xm{ color: #ff9500; border: 1px solid #ff9500; } #slyyQhmsDataListUL .description .desdiv { width: 65%; white-space: nowrap; text-overflow: ellipsis; float: left; margin-top: 7px; } .calenspan{ font-weight: 100; font-size: 14px; color: #8e8e93; padding-left: 20px; }</style></head>
+<body>
+<div class="panel-overlay"></div>
+<div class="panel panel-right panel-cover" style="box-shadow:-2px 0 5px rgba(0,0,0,.15);">
+	<div class="view panel-view">
+		<div class="navbar" id="panelNavbar">
+			<div class="navbar-inner">
+				<div class="center" id="panelTitle">筛选</div></div>
+		</div>
+		<div class="pages navbar-through">
+			<div data-page="panel-index" class="page">
+				<div class="page-content" id="panelContent">
+					<div id="commPanelSearch"></div>
+					<div id="txlPanelSearch" style="display:none;">
+						<!-- Search bar -->
+						<form class="searchbar searchbar_txl" style="background:#EFEFF4;z-index:10;">
+							<div class="searchbar-input">
+								<input type="search" placeholder="搜索" />
+								<a href="#" class="searchbar-clear"></a>
+							</div>
+							<a href="#" class="searchbar-cancel">取消</a></form>
+						<!-- Search bar overlay-->
+						<div class="searchbar-overlay"></div>
+						<div class="page-content" style="margin-top:-35px;">
+							<div class="content-block searchbar-not-found">
+								<div class="content-block-inner">没有相关内容</div>
+							</div>
+							<div id="txlPanelTree" class="tree-block txl-treeblock"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="views">
+	<div class="view view-main">
+		<!-- Top Navbar-->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="center" id="navbarTitle" style="letter-spacing: 1px;">惠三农</div></div>
+		</div>
+		<!-- Bottom Toolbar-->
+		<div class="toolbar tabbar tabbar-labels">
+			<div class="toolbar-inner" id="toolbarDiv">
+				<a href="#tab2" id="homePage" class="tab-link active">
+					<i class="icon demo-icon-yingyong"></i>
+					<span class="tabbar-label">首页</span></a>
+				<a href="#tab1" id="gzlk" class="tab-link">
+					<i class="icon demo-icon-gzlk"></i>
+					<span class="tabbar-label">关注粮库</span></a>
+				<a href="#tab3" id="xinWenZiXun" class="tab-link">
+					<i class="icon demo-icon-3"></i>
+					<span class="tabbar-label">信息</span></a>
+				<a href="#tab4" id="xiaoxi" class="tab-link">
+					<i class="icon demo-icon-2"></i>
+					<span class="tabbar-label">我的</span></a>
+			</div>
+		</div>
+		<!-- /End of Bottom Toolbar-->
+		<div class="pages navbar-through toolbar-through">
+			<div data-page="home" class="page">
+				<div class="page-content "  data-ptr-distance="80" id="mainRefreshContent">
+					<!--<div class="pull-to-refresh-layer">
+						<div class="preloader"></div>
+						<div class="pull-to-refresh-arrow"></div>
+					</div>-->
+
+					<div class="" id="functionDiv">
+						        <div class="model_div" id="slyyThirdYzmDiv" style="display: block">
+        <div class="model_div_content" style="height: 220px">
+            <div class="model_div_text">
+                <div class="slyy-third-yzmdiv-section" style="display: flex; margin-bottom: 15px; align-items: center;">
+                    <input type="text" id="slyyThirdYzmCaptchaInput" class="slyy-third-yzmdiv-input-field" placeholder="请输入计算结果" style="flex: 1;padding: 10px;border: 1px solid #ccc;border-radius: 4px;font-size: 14px;width:50%">
+                    <img src="" alt="验证码" id="slyyThirdYzmdivCaptchaImg" width="100px" height="40px" style="margin-left:16px;width:50%" onclick="refreshCaptcha()">
+                </div>
+
+                <div class="slyy-third-yzmdiv-section" style="display: flex; margin-bottom: 15px; align-items: center;" id="slyyThirdMessageVerifyDiv">
+                    <input type="text" id="slyyThirdYzmPhoneInput" class="slyy-third-yzmdiv-input-field" placeholder="请输入手机验证码" style="flex: 1;padding: 10px;border: 1px solid #ccc;border-radius: 4px;font-size: 14px;width: 50%">
+                    <button id="slyyThirdYzmSendBtn" class="slyy-third-yzmdiv-send-btn" onclick="sendSMS()" style="margin-left: 10px;padding: 10px 15px;background-color: #4CAF50;color: white;border: none;border-radius: 4px;cursor: pointer;font-size: 14px;width: 40%">发送验证码</button>
+                </div>
+            </div>
+
+            <div class="list-block model_div_btn">
+            	
+                <button class="button button-big button-fill button_2" style="width: 40%;" onclick="yzmDivCancel()">
+                    <strong>取消</strong>
+                </button>
+                <button class="button button-big button-fill button_2 button-gray" id="ggqd" style="width: 40%;background-color:#1E8147" onclick="yzmDivYes()">
+                    <strong>确定</strong>
+                </button>
+            </div>
+        </div>
+        </div>
+        
+						<div class="page-content-main" style="top:50px">
+							<div class="btn-container" id="TOP_BTN_AREA">
+								<div class="btn-item btn-area-empty" id="MOBILE_SLYY" onclick="mainModule.slyyQhms(0)">
+									<img src="../../image/main/sellGrain.png" alt="售粮预约">
+									<p>售粮预约</p>
+								</div>
+								<div class="btn-item btn-area-empty" id="MOBILE_SLYYJL" onclick="mainModule.slyycx(0)">
+									<img src="../../image/main/appointmentRecord.png" alt="预约记录">
+									<p>预约记录</p>
+								</div>
+								<div class="btn-item btn-area-empty" id="MOBILE_SLXCQD" onclick="mainModule.slxcqd(0)">
+									<img src="../../image/main/sellGrainSign.png" alt="售粮签到">
+									<p>售粮签到</p>
+								</div>
+								<div class="btn-item btn-area-empty" id="MOBILE_SLPDYL" onclick="mainModule.pdyl(0)">
+									<img src="../../image/main/queueTrend.png" alt="排队动态">
+									<p>排队动态</p>
+								</div>
+								<div class="btn-item btn-area-empty" id="MOBILE_SLCX" onclick="mainModule.slcx()">
+									<img src="../../image/main/sellGrainSearch.png" alt="售粮查询">
+									<p>售粮查询</p>
+								</div>
+							</div>
+
+							<div class="notification-bar">
+								<div class="left-section">
+									<div style="color:rgb(20,125,66)"><strong>消息</strong></div>
+									<div><strong>通知</strong></div>
+								</div>
+								<div class="separator"></div>
+								<div class="right-section">
+									<div class="scroll-container" id="scrollContainer">
+<!--										<div class="scroll-item"><span><span class="important">重要</span><span class="importantNotifyMsg">物流供需发布时间2025年3月14日！</span></span><span class="noReadMsg">·</span></div>-->
+<!--										<div class="scroll-item"><span><span class="important">重要</span><span class="importantNotifyMsg">限时优惠活动还剩最后3小时</span></span><span class="noReadMsg">·</span></div>-->
+<!--										<div class="scroll-item"><span><span class="important">重要</span><span class="importantNotifyMsg">请注意保管好您的账户信息</span></span><span class="noReadMsg">·</span></div>-->
+<!--										<div class="scroll-item"><span><span class="important">重要</span><span class="importantNotifyMsg">物流供需发布时间2025年3月14日！</span></span><span class="noReadMsg">·</span></div>-->
+									</div>
+									<div class="arrow-icon">›</div>
+								</div>
+							</div>
+
+							<div class="picture-search" id="PICTURE_SEARCH_AREA">
+								<div class="picture-search-left btn-area-empty" id="MOBILE_PDPZ" onclick="mainModule.pdpz()">
+									<div class="picture-search-title">司机排队</div>
+								</div>
+								<div class="picture-search-right btn-area-empty" id="MOBILE_PDXXCX" onclick="mainModule.pdxxcx()">
+									<div class="picture-search-title">排队查询</div>
+								</div>
+							</div>
+
+							<div class="two-btn-area" id="TWO_BTN_AREA">
+								<div class="two-btn-area-left" id="MOBILE_SLYY_AREA">
+									<div class="btn-area-top-div">
+										<h4>售粮预约</h4>
+									</div>
+									<div class="btn-area-bottom-div">
+										<div class="btn-area-item btn-area-empty" id="MOBILE_LKGS" onclick="mainModule.lkgs()">
+											<img src="../../image/main/grainMoney.png" alt="粮款估算">
+											<p>粮款估算</p>
+										</div>
+										<div class="btn-area-item btn-area-empty" id="MOBILE_SLJSGS" onclick="mainModule.jjrjsxx()">
+											<img src="../../image/main/settleAnnounce.png" alt="结算公示">
+											<p>结算公示</p>
+										</div>
+									</div>
+								</div>
+								<div class="two-btn-area-right" id="MOBILE_XCSL_AREA">
+									<div class="btn-area-top-div">
+										<h4>现场售粮</h4>
+									</div>
+									<div class="btn-area-bottom-div">
+										<div class="btn-area-item btn-area-empty" id="MOBILE_SLRPDWH" onclick="mainModule.slrpdwh()">
+											<img src="../../image/main/queueMatain.png" alt="排队维护">
+											<p>售粮人排队维护</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="TWO_BTN_AREA_LINE"></div>
+
+							<div class="one-btn-area" id="MOBILE_THYYMK">
+								<div class="btn-area-top-div">
+									<h4>提货预约</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2 btn-area-empty"  id="MOBILE_THYY" onclick="mainModule.slyyQhms(1)">
+										<img src="../../image/main/15.png" alt="提货预约">
+										<p>提货预约</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_THYYJL" onclick="mainModule.slyycx(1)">
+										<img src="../../image/main/16.png" alt="提货预约记录">
+										<p>提货预约</p>
+										<p>记录</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_THXCQD" onclick="mainModule.slxcqd(1)">
+										<img src="../../image/main/17.png" alt="提货签到">
+										<p>提货签到</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_THPDYL" onclick="mainModule.pdyl(1)">
+										<img src="../../image/main/18.png" alt="排队动态">
+										<p>排队动态</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_TZDCX" onclick="mainModule.cktzdcx()">
+										<img src="../../image/main/19.png" alt="通知单查询">
+										<p>通知单</p>
+										<p>查询</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty"  id="MOBILE_THCX" onclick="mainModule.thcx()">
+										<img src="../../image/main/18.png" alt="提货查询">
+										<p>提货查询</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="MOBILE_THYYMK_LINE"></div>
+
+							<div class="one-btn-area" id="MOBILE_CXDJ">
+								<div class="btn-area-top-div">
+									<h4>产销对接</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_XQXX" onclick="mainModule.xqxx()">
+										<img src="../../image/main/buyGrainMessage.png" alt="买粮信息">
+										<p>买粮信息</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_GYXX" onclick="mainModule.gyxx()">
+										<img src="../../image/main/sellGrainMessage.png" alt="卖粮信息">
+										<p>卖粮信息</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_XQFB" onclick="mainModule.xqfb()">
+										<img src="../../image/main/buyGrainPublish.png" alt="买粮发布">
+										<p>买粮发布</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_GYFB" onclick="mainModule.gyfb()">
+										<img src="../../image/main/sellGrainPublish.png" alt="卖粮发布">
+										<p>卖粮发布</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty"></div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="MOBILE_CXDJ_LINE"></div>
+
+							<div class="one-btn-area" id="MOBILE_WLGX">
+								<div class="btn-area-top-div">
+									<h4>物流供需</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_WYYL" onclick="mainModule.wyyl()">
+										<img src="../../image/main/logisticsDemand.png" alt="物流需求">
+										<p>物流需求</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_WLFW" onclick="mainModule.wlfw()">
+										<img src="../../image/main/logisticsService.png" alt="物流服务">
+										<p>物流服务</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_WLXQFB" onclick="mainModule.wlxqfb()">
+										<img src="../../image/main/demandPublish.png" alt="需求发布">
+										<p>需求发布</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_WLFWFB" onclick="mainModule.wlfwfb()">
+										<img src="../../image/main/logisticsPublish.png" alt="物流发布">
+										<p>物流发布</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty"></div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="MOBILE_WLGX_LINE"></div>
+
+							<div class="one-btn-area" id="MOBILE_HNFW">
+								<div class="btn-area-top-div">
+									<h4>惠农资讯</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_ZCFG" onclick="mainModule.hnfw(7)">
+										<img src="../../image/main/policyLaw.png" alt="政策法规">
+										<p>政策法规</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_CLZS" onclick="mainModule.hnfw(8)">
+										<img src="../../image/main/grainKnow.png" alt="储粮知识">
+										<p>储粮知识</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_GYHD" onclick="mainModule.hnfw(9)">
+										<img src="../../image/main/welfareActivity.png" alt="公益活动">
+										<p>公益活动</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_KPSP" onclick="mainModule.hnfw(11)">
+										<img src="../../image/main/scienceVideo.png" alt="科普视频">
+										<p>科普视频</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty"></div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="MOBILE_HNFW_LINE"></div>
+
+							<div class="one-btn-area" style="display:none">
+								<div class="btn-area-top-div">
+									<h4>统一信用</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2" onclick="mainModule.xyxxgs()">
+										<img src="../../image/main/15.png" alt="信用公示">
+										<p>信用公示</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty">
+									</div>
+									<div class="btn-area-item2 btn-area-empty">
+									</div>
+									<div class="btn-area-item2 btn-area-empty">
+									</div>
+									<div class="btn-area-item2 btn-area-empty"></div>
+								</div>
+							</div>
+
+							<div class="interval-line" id="MOBILE_XGLJ_LINE"></div>
+
+							<div class="one-btn-area" id="MOBILE_XGLJ">
+								<div class="btn-area-top-div">
+									<h4>相关链接</h4>
+								</div>
+								<div class="btn-area-bottom-div2">
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_ZCLGW" onclick="mainModule.openLianjie(2)">
+										<img src="../../image/main/zclgw.png" alt="中储粮官网">
+										<p>中储粮官网</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_ZCLW" onclick="mainModule.openLianjie(1)">
+										<img src="../../image/main/zclw.png" alt="中储粮网">
+										<p>中储粮网</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_ZHLW" onclick="mainModule.openLianjie(3)">
+										<img src="../../image/main/zhlw.png" alt="中华粮网">
+										<p>中华粮网</p>
+									</div>
+									<div class="btn-area-item2 btn-area-empty" id="MOBILE_ZXSC" onclick="mainModule.zxsc(10)">
+										<img src="../../image/main/zxsc.png" alt="在线手册">
+										<p>在线手册</p>
+									</div>
+								</div>
+							</div>
+
+<!--							<div class="tabs">-->
+<!--								<div id="tab1" class="tab active">-->
+<!--									<div class="m_center_div">-->
+<!--										<ul id="ulIdMain">-->
+
+<!--										</ul>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+
+						</div>
+
+						<div class="card" id="jqsltx_container" style="margin:0;box-shadow: 0 0px 1px rgba(0,0,0,.1);display:none;">
+							<div class="card-content">
+								<div class="list-block media-list">
+									<ul>
+										<li class="item-content">
+											<div class="item-media">
+												<img src="../../image/main/success.png" width="44" /></div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="" id="jqsltx_div" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;"></div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="list-block media-list issue-list list-block-mob" id="dqr_cont" style="display:none;">
+							<div class="list-group">
+								<ul id="dqr_list">
+									<div class="title-flag-mob"></div>
+									<li class="list-group-title list-group-title-mob">待确认通知
+										<div style="float: right;padding-top: 3px;">
+											<i class="f7-icons size-16" style="color: #8e8e93;">chevron_right</i></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="mainXwyzmDiv"></div>
+					<buttion id="mainXwyzmBtn" style="display:none"></buttion>
+				</div>
+				<div class="model_div" id="maingg_ggdiv" style="display:none;">
+					<div class="model_div_content">
+						<div class="tilte" id="maingg_title">公告</div>
+						<div class="model_div_text">
+							<p id="maingg_text" style="text-indent:2em"></p>
+						</div>
+
+						<div class="list-block model_div_btn">
+							<button class="button button-big button-fill button_2" onclick="mainModule.qx()" style="display:none;">
+								<strong>取消</strong>
+							</button>
+							<button class="button button-big button-fill button_2 button-gray" style="background-color:#1E8147" id="ggqd" onclick="mainModule.qd()">
+								<strong>确定</strong>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../js/constant_variable.js"></script>
+	<script language="javascript" src="../../js/md5.js"></script>
+<script language="javascript" src="../../js/Base64.js"></script>
+<script type="text/javascript" src="../../js/Framework7/js/framework7.js"></script>
+<script type="text/javascript" src="../../js/Framework7/plugin/toast.js"></script>
+<link rel="stylesheet" href="../../js/Framework7/plugin/toast.css" />
+<script language="javascript" src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script language="javascript" src="../../js/wechat.js"></script>
+<script language="javascript" src="../../js/common.js"></script>
+<script language="javascript" src="../../js/functionConfig.js"></script>
+<script src="../../js/require/require.js" data-main="../../js/root.js"></script>
+<script type="text/javascript" src="../../js/cbhycpMobile/cm-alert.js"></script>
+<script language="javascript" src="../../js/jquery-3.3.1.min.js"></script>
+<!--        <script language="javascript" src="../../js/jquery-1.9.1.min.js"></script>-->
+<script language="javascript" src="../../js/jqTree/tree.jquery.js"></script>
+<link rel="stylesheet" type="text/css"  href="../../css/jqTree/jqtree.css">
+<script language="javascript" src="../../js/city.js"></script>
+<script language="javascript" src="city.js"></script>
+     <script language="javascript" src="../../js/jsencrypt.min.js"></script>
+
+<script>
+//20250725 由15.6秒，改成22.6秒，增加第二名后条件，getsjllist() 验证码检测放号后发送。
+//分别在jianch 和 getsjllist() 增加对高庙粮库的不同区别对待。
+    //当前位置经度
+var longitude=113.04794043302636;
+    //当前位置纬度
+var latitude=33.99322784633535;
+
+var ischangecyr=1;  //是选择承运人，还是直接填车牌号，直接填车牌值写0，否则其他数值。
+var isyzm=true;   //是否需要验证码
+
+var lsnm="200001";
+var lscm="小麦";
+//var lsnm="200002";
+//var lscm="稻谷";
+//var lsnm="200003";
+//var lscm="玉米";
+
+var ywlx="0";   //业务类型，售粮
+var yzm="";
+
+var yysqParams = {
+			"yyr": "",
+			"tjr": "",
+			"sfz": "",
+			"jsr": "",
+			"phone": "",
+			"lxfs": "",
+			"pznm": "",
+			"pzmxnm": "",
+			"zznm": "",
+			"zzmc": "",
+			"rq": "",
+			"lsnm": "",
+			"lsmc": "",
+			"zldd":"",
+			"kssj": "",
+			"jssj": "",
+			"cs": "",
+			"sl": "",
+			"cphStr": "",
+			"cllxNm": "",
+			//"cyrnm": "",	
+            "tzdbh": "", //
+            "ywlx": "0",//业务类型，0售粮
+			"cyr": "",
+			//"cyrsfzh": "",
+			"cyrsjh": "",
+			"qymc": "", //
+			"xydm": "", //
+			"wxdlFlag":true,
+			"userType": "",			
+			"dxyzm": yzm,//短信验证码
+			"mobileDeviceId": "",//
+			"uuid":"",
+			"openId":"",//
+			"secretData":"",
+			"devicetype":"weixin",//
+			"longitude":117.82396227121353,
+			"latitude":39.30061204440088,
+			"yyfsmc": "预约挂号",
+	        "yyfsnm": "1"
+		};
+
+
+function jsonToUrlencoded(json) {
+    const pa = new URLSearchParams();
+    for (let key in json) {
+        pa.append(key, json[key]);
+    }
+    return pa.toString();
+}
+
+
+var tm = 9999999999999;
+var fhs = 0;
+//var yypzmxn1="";
+var riqi;
+function jiancha(){
+
+	var params = {
+		'kdnm': yysqParams.zznm,
+		'idCard': yysqParams.sfz,
+		'ywlx': ywlx,
+		'devicetype':'weixin'
+	};
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/getKdYyqkDays",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		//async:false,
+		success:function(data){
+			
+	        if (data) {
+	        		if (data.retCode == '1') {
+			
+	        			    var json = data.data[djt];	
+	        			    console.log(data.data[djt].zzmc);
+	        			    
+	        			    if(sendparams==""){
+	        			    	riqi=json.rq;
+	        			    	getsearchliangku();
+	        			    }
+	        			    if($$("#slyyThirdYzmPhoneInput").val().length == 6){
+                               	      yysqParams.dxyzm = $$("#slyyThirdYzmPhoneInput").val();
+                               	      console.log(yysqParams.dxyzm);
+                            }
+                            
+	        	            if(json.xssyhsl>0){
+                           
+                                yysqParams.pznm = json.yypznm;
+                                yysqParams.pzmxnm = json.yypzmxList[0].yypzmxnm;
+                                //yysqParams.zzmc = json.zzmc;
+                                yysqParams.rq = json.rq;
+                                yysqParams.jssj = json.yypzmxList[0].jssj;
+                                yysqParams.kssj = json.yypzmxList[0].kssj;
+
+                               if(lkname.includes("高庙粮库")){
+
+                                  if(yysqParams.dxyzm!="" && yysqParams.uuid!="" && new Date().getTime()>tm){  //为了不第一名提交，才这样的。快速抢不需要
+
+                                	    yyksubmit();
+                                    }
+
+							   }else{
+                                                        
+                                 if(isyzm){
+                                    if(json.xssyhsl<fhs &&yysqParams.dxyzm!="" && yysqParams.uuid!="" && new Date().getTime()>tm){  //为了不第一名提交，才这样的。快速抢不需要
+
+                                	    yyksubmit();
+                                    }
+                                 }else{
+                                	if(json.xssyhsl<fhs && yysqParams.uuid!="" && new Date().getTime()>tm){  //为了不第一名提交，才这样的。快速抢不需要
+                                	    yyksubmit();
+                                    }
+                                 }
+							    }
+                                 if(fhs==0){  //为了不第一名提交，才这样的。快速抢不需要
+                                	fhs=json.xssyhsl;
+                                }
+                                console.log(json.xssyhsl);
+                                console.log(tm);
+
+                                if(tm==9999999999999){  //为了不第一名提交，才这样的。快速抢不需要
+                                	getsjllist();
+                                	//tm=new Date().getTime()+15000;
+                                }
+	        		            
+	        	            }else{
+	        	            	tm=9999999999999;
+	        	            }
+	        	            //yypzmxn1=data.data[0].yypzmxList[0].yypzmxnm;  如果没有会报错
+					
+							if(json.xssyhsl==0){
+                           
+									//clearInterval(jishiqi);
+							}					
+	        				
+	        		}
+	        }else{
+				//denglu();
+	        			console.log("登录信息错误，请检查密码！");
+	        			
+	        }
+			console.log(data.data);
+	    },		
+	    //timeout: 4000,
+	 })
+
+	if(!publicKey==pubKey){
+          console.log("公钥错误，请检查！");
+		  if(pubKey.length>10){
+			publicKey=pubKey;
+			console.log("公钥已更新！");
+		  }
+	 }
+
+}
+
+
+//提交不成功，关注一下加密key和str+的字符
+//key来自 https://hsn.sinograin.com.cn/mobile/html/fjlk/lkxx.js
+   	    function secretYysqParams(params){
+            var encrypt = new JSEncrypt();
+             encrypt.setPublicKey(publicKey);
+             var str = params.phone+"i"+params.pznm+"n"+params.pzmxnm+"s"+params.sfz+"p"+params.rq+"u"+params.cphStr+"r"+params.zznm
+                     + params.uuid + params.dxyzm + params.yyfsnm + params.yyfsmc;
+             params.secretData = encrypt.encrypt(str);
+             return params;
+       }
+      //var  publicKey='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApk08YJ+71NyV/M6IN23woPlYG8urnp5Mj1cK2QSIXBmU75qnEB2skSDH3Sz9KvShsKbhEMnckxV9TWIt9kY55fwEtaCiVxmkAoCv+47xu4iNZoO6s4WaP3MbEmEVB0Oxs+YRPxEzzvTP3eXIe6+nf480derjQGRq/6lacsmAZX6N6zzZ5jb+uZYrwJ7f+iPh0CP2qSJBlphPXNCsjLjl3psYsGUxdP3c9KSDQVYl6RYkHDk74PyBDjilUDB++Ftx35jvlFjSw+6tXuZnw3L88FlYgLQzEvPKO07Yx/zyRMXGJADCTP0mmm4uOe/HtrUlfpLNarCBI1t26w+xIxGkQQIDAQAB';
+
+          var publicKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0uFFjWtTp+La/vi/MqlnuoMpHYR8QNVSuaV0WA0eYei+FnWt9e+pCYfocL8/tMQA4vWxCM9ZcffsgknC1H7hbKEnIAGrG+FOCTzzlWUbm9N7XdVUuyD5hrjr79rN64lwKR5SY0msogBdCf5Nlt4QX1A5klVnDU7NfCyBNmIo6G2tWWCsEEL7mp4PyEjD0LXmx8uBVboexkmIBV/eFTNdIduCKsCp43SCpyu8yfZ6aaSLlHP5Pj3cyC5IzTqBBeiSu/JyXoE9X4D6rxnzc+Ge/stpzXV9Qe9ZC85TsxfmDkERB61rYbrOq7dnw8aAGtkwaGvdqjAPLGK1dGileBOy1QIDAQAB";
+
+
+/*function secretYysqParams(params){
+            var encrypt = new JSEncrypt();
+             encrypt.setPublicKey(publicKey);
+             var str = params.phone+"i"+params.pznm+"n"+params.pzmxnm+"s"+params.sfz+"p"+params.rq+"u"+params.cphStr+"r"+params.zznm
+                     + params.uuid + params.dxyzm;
+             params.secretData = encrypt.encrypt(str);
+             return params;
+}
+*/
+
+function generateRandomDecimal(min, max, precision) {
+    // 计算最小值和最大值之间的差
+    const range = max - min;
+    // 生成一个[0, 1)之间的随机数，然后乘以范围再加上最小值
+    const randomValue = Math.random() * range + min;
+    // 使用toFixed()方法来格式化数字到指定的小数位数
+    return parseFloat(randomValue.toFixed(precision));
+}
+ 
+// 调用函数生成介于0.02到0.06之间的14位随机小数
+const randomDecimal = generateRandomDecimal(0.02, 0.06, 14);
+
+function yyksubmit(){
+    yysqParams = secretYysqParams(yysqParams);
+
+    
+    $.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/reserve",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(yysqParams),
+		async:false,
+		success:function(data){
+				console.log(data.data);
+	            if (data) {
+	    		    if (data.retCode == '1') {				
+	    		    	var jsonObj = data.data;
+	    		    	if (jsonObj.retCode == '1' || jsonObj.retCode == '2') {
+                            clearInterval(jishiqi);
+	    		    		console.log(jsonObj.msg);
+	    		    		console.log(username);					
+    
+	    		    	} 				
+	    		    } 
+	    	    }
+
+	        },		
+	    //timeout: 3000,
+	 })
+
+}
+
+var jishiqi;
+
+function getclxx(){
+    
+    var cyrxinxi={	
+	'userId': username,
+	'devicetype':'weixin'
+    }
+	fetch('https://hsn.sinograin.com.cn/slyyServlet/service/clxxwh/getClxxList', {
+
+    method: 'POST', // 指定请求方法
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    body: jsonToUrlencoded(cyrxinxi)  // 转换数据格式并发送
+    }).then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+}).then(data => {
+
+	console.log(data.data);
+    var retCode = data.retCode;
+	if (retCode == '1') {
+
+		var cllist = data.data;
+		var jigeche=cllist.length;
+		var zongliang=0;
+		var cycp="";
+		var cyllxnm="";
+
+
+		cllist.forEach(function(c){
+
+			zongliang=zongliang+c.clzz;
+			cycp=cycp+c.cph+",";
+			cyllxnm=cyllxnm+c.cclx+",";    //售粮人不需要这一项，但是农户需要
+			//cynm=cynm+c.nm+",";
+			//cysfz=cysfz+c.sfzh+",";
+		
+
+		})
+		yysqParams.cs = jigeche;
+		yysqParams.sl = zongliang;
+		yysqParams.cphStr = cycp;
+		yysqParams.cllxNm = cyllxnm;     //售粮人不需要这一项，但是农户需要
+	
+		console.log("获取车辆信息");
+		console.log(yysqParams);
+	
+		
+	}else{
+		console.log("获取车辆信息失败！");
+		//clearInterval(jishiqi);
+	}
+
+   });
+}
+
+function getcyr(){
+    
+    var cyrxinxi={	
+	'userId': username,
+	'devicetype':'weixin'
+    }
+	fetch('https://hsn.sinograin.com.cn/slyyServlet/service/cyrxxwh/getCyrxxList', {
+
+    method: 'POST', // 指定请求方法
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    body: jsonToUrlencoded(cyrxinxi)  // 转换数据格式并发送
+    }).then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+}).then(data => {
+
+	console.log(data.data);
+    var retCode = data.retCode;
+	if (retCode == '1') {
+
+		var cyrlist = data.data;
+		//var jigeche=cyrlist.length;
+		//var zongliang=0;
+		//var cycp="";
+		//var cyllxnm="";
+		//var cynm="";
+		//var cysfz="";
+		var cyren="";
+		var cysj="";
+
+		cyrlist.forEach(function(c){
+
+			//zongliang=zongliang+c.clzz;
+			//cycp=cycp+c.cph+",";
+			//cyllxnm=cyllxnm+c.cclx+",";
+			//cynm=cynm+c.nm+",";
+			//cysfz=cysfz+c.sfzh+",";
+			cyren=cyren+c.cyrxm+",";
+			cysj=cysj+c.lxdh+",";
+
+		})
+		//yysqParams.cs = jigeche;
+		//yysqParams.sl = zongliang;
+		//yysqParams.cphStr = cycp;
+		//yysqParams.cllxNm = cyllxnm;
+		//yysqParams.cyrnm = cynm;
+		yysqParams.cyr = cyren;
+		//yysqParams.cyrsfzh = cysfz;
+		yysqParams.cyrsjh = cysj;
+		console.log("获取承运人信息");
+		console.log(yysqParams);
+		//jishiqi=setInterval(jiancha,1000);
+		
+	}else{
+		console.log("获取承运人信息失败！");
+		//clearInterval(jishiqi);
+	}
+
+   });
+}
+
+
+
+function zt(){
+	alert("点击确定继续");
+}
+
+/*function sendSMS1() {
+
+	
+	if(isyzm){
+	  var params = {
+	  	"phoneNum": username,
+	  	"zznm": zznm
+	  };
+
+	  $.ajax({
+	  	type: "POST",
+	  	url: "https://hsn.sinograin.com.cn/slyyServlet/service/smscheck/sendSMSCode",
+	  	headers: {
+	  		'Content-Type': 'application/x-www-form-urlencoded'
+	  		},
+	  	data: jsonToUrlencoded(params),
+	  	async:false,
+	  	success:function(data){
+	  			console.log(data.data);
+	              if (data.data.resultCode == '1') {
+                      console.log("验证码发送成功");
+	  				var userInput = prompt("请输验证码:"+username, "");
+	  				yzm=userInput;
+	  				yysqParams.dxyzm = yzm;
+                  }
+  
+	          },		
+	      //timeout: 3000,
+	   })
+    }else{
+    	console.log("此地无需手机验证码。。。");
+    }
+}*/
+
+
+//$("#xiaoxi").on("click" ,sendSMS);
+$("#gzlk").on("click" ,getzznm);
+
+function getzznm() {
+	
+	var params = {
+		
+		"phone":username,
+		"zzmc":"",
+		"latitude":"",
+		"longitude":"",
+		"sheng":"",
+		"sfz":yysqParams.sfz,
+		"shi":"",
+		"xian":"",
+		"devicetype":"weixin"
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/kdxx/getYhgzList",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		async:false,
+		success:function(data){
+				var gzlklist =data.data.data;
+			    console.log(gzlklist);
+				gzlklist.forEach(function(c){
+        
+			       if(lkname==c.zzmc){
+
+                    yysqParams.zzmc = c.zzmc;
+			       	yysqParams.zznm = c.zznm;
+			       	yysqParams.latitude = c.latitude-randomDecimal;
+			       	yysqParams.longitude =c.longitude-randomDecimal;
+					latitude=c.latitude;
+					longitude=c.longitude;
+
+			       }
+
+		       })
+
+	        },		
+	    //timeout: 3000,
+	 })
+}
+function gzlkyyk() {
+	
+	var params = {		
+		"phone":username,
+		"zzmc":lkname,
+		"zznm":yysqParams.zznm,
+		"czflag":"gz"
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/kdxx/updateGzzt",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		async:false,
+		success:function(data){				
+			    console.log(data);				
+
+	        },		
+	    //timeout: 3000,
+	 })
+}
+
+function yykhdmcheck() {
+	
+	var params = {		
+		"sfz":yysqParams.sfz,
+		"devicetype":"weixin"
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/hdmCheck",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		async:false,
+		success:function(data){				
+			    console.log(data);				
+
+	        },		
+	    //timeout: 3000,
+	 })
+}
+
+function yykgetDCurrentLocation() {	
+	
+	var params = {		
+		"latitude":yysqParams.latitude,
+		"longitude":yysqParams.longitude,
+		"lklatitude":latitude,
+		"lklongitude":longitude,		
+		"lkdm":yysqParams.zznm,		
+		"devicetype":"weixin"
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/getDistanceByCurrentLocation",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		async:false,
+		success:function(data){				
+			    console.log(data);				
+
+	        },		
+	    //timeout: 3000,
+	 })
+}
+
+
+
+function getsearchliangku() {
+	
+	var params = {
+		
+		"phone":username,
+		"rq":riqi,     //格式 20250712
+		"latitude":yysqParams.latitude,
+		"longitude":yysqParams.longitude,
+		"ywlx":"0",
+		"sfz":yysqParams.sfz,
+		"min":0,
+		"max":10,
+		"mobileDeviceId":yysqParams.mobileDeviceId,
+		"yk":"",
+		"jlmj":"",
+		"kqmc":lkname,
+		"wxdlFlag":true,
+		"selectedVariety":"",		
+		"devicetype":"weixin"
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/getResvKdListBySearch",
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+			},
+		data: jsonToUrlencoded(params),
+		async:false,
+		success:function(data){
+				console.log(data.data);
+				if(data.data.length>0){					
+					if(data.data[0].zzmc==lkname){
+						sendparams = data.data[0];
+						yysqParams.zzmc = data.data[0].zzmc;
+			       	    yysqParams.zznm = data.data[0].zznm;
+			       	    yysqParams.latitude = data.data[0].latitude-randomDecimal;
+			       	    yysqParams.longitude = data.data[0].longitude-randomDecimal;
+                        latitude=data.data[0].latitude;
+                        longitude=data.data[0].longitude;
+
+                        gzlkyyk();
+					}else{
+						console.log("暂未找到此粮库");
+					}
+				}
+                
+	        },		
+	    //timeout: 3000,
+	 })
+}
+
+//这给地方需要与提交间隔15秒，否则提示频繁
+var sendparams="";
+function getsjllist() {
+	
+	$.ajax({
+		type: "POST",
+		url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/getResvSjList",
+		headers: {
+			'Content-Type': 'application/json'
+			},
+		data: JSON.stringify(sendparams),
+		async:false,
+		success:function(data){
+				console.log(data.data);
+				var jtime = 15600;
+				if(lkname.includes("高庙粮库")){
+                    jtime = 15000;
+				}else if(lkname.includes("漯河") || lkname.includes("许昌")){
+					jtime = 19600;
+				}
+				tm=new Date().getTime()+jtime;
+				if($$("#slyyThirdYzmSendBtn")[0].textContent.length<6){
+					sendSMS();
+				}				
+				yykhdmcheck();
+				yykgetDCurrentLocation();
+	        },		
+	    //timeout: 3000,
+	 })
+}
+
+function denglu(){
+    //登录不成功关注一下这个。
+	var salt = "1#2$3%4(5)6@7!poeeww$3%4(5)djjkkldss";
+    password = hex_md5(password + "{" + salt + "}");
+
+    var dengluxinxi={
+	'j_username': username,
+	'j_password': password,
+	'devicetype':'weixin'
+    }
+	fetch('https://hsn.sinograin.com.cn/slyyServlet/j_bsp_security_check/mobile', {
+
+    method: 'POST', // 指定请求方法
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    body: jsonToUrlencoded(dengluxinxi)  // 转换数据格式并发送
+    }).then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+}).then(data => {
+
+	console.log(data.data);
+    var retCode = data.data[0].loginCode;
+	if (retCode == '1') {
+
+		
+		var userJson = data.data[0].user;
+		yysqParams.yyr = userJson.userName;
+		yysqParams.jsr = userJson.userName;
+		yysqParams.phone = userJson.userId;
+		yysqParams.lxfs = userJson.userId;
+		yysqParams.sfz = userJson.idcard;
+		yysqParams.tjr = userJson.userNm;
+		yysqParams.userType = userJson.userType + "";
+		//yysqParams.zznm = zznm;
+		yysqParams.lsnm = lsnm;
+		yysqParams.lsmc = lscm;
+
+       
+		if(yysqParams.userType!="02"){
+			console.log("请注意此账号不是售粮人类型");
+		}
+       
+        if(ischangecyr==0){
+
+        	getcph();        	
+
+        }else{
+        	getcyr();
+        	getclxx();
+        	getsearchliangku();
+        	getzznm();
+        }
+		
+		console.log(yysqParams);
+		jishiqi=setInterval(jiancha,1000);
+		
+	}else{
+		console.log("登录失败，请检查账号密码！");
+	}
+
+   });
+}
+
+function refreshCaptcha() {
+
+    //clearInterval(jishiqi); 
+    yysqParams.uuid="";  
+    $$('#slyyThirdYzmCaptchaInput').val(""); 
+    $$("#slyyThirdYzmPhoneInput").val("");
+    $$("#slyyThirdYzmSendBtn")[0].textContent="发送验证码";     
+    $$('#slyyThirdYzmdivCaptchaImg').attr('src', "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/captchaMath?option=image&t=" + new Date().getTime());
+}
+
+function sendSMS() {
+	        //clearInterval(jishiqi); 
+	        //$$("#slyyThirdYzmPhoneInput").val(""); 
+	        yysqParams.dxyzm = "";
+            const imgCaptchaCode = $$('#slyyThirdYzmCaptchaInput').val();
+            if (!imgCaptchaCode || imgCaptchaCode === '') {
+                   cmApi.prompt.toast('请输入图形验证码');
+                   refreshCaptcha();
+                   return;
+            }
+            var params = {
+	  	             "devicetype":"weixin"
+	                  };
+
+	        $.ajax({
+	  	           type: "POST",
+	  	           url: "https://hsn.sinograin.com.cn/slyyServlet/service/nhyy/captchaMath?option=chkCode&code=" + imgCaptchaCode,
+	  	           headers: {
+	  	           	'Content-Type': 'application/x-www-form-urlencoded'
+	  	           	},
+	  	           data: jsonToUrlencoded(params),
+	  	           async:false,
+	  	           success:function(jsonObj){
+	  	           		
+	                        if (!jsonObj || "" == jsonObj) {
+                                cmApi.prompt.toast('网络异常，请检查您的网络连接');
+                                refreshCaptcha();
+                                return;
+                            }
+                            if (jsonObj.retCode == '0') {
+                               cmApi.prompt.toast('系统异常，请联系客服');
+                               refreshCaptcha();
+                               return;
+                            }
+                            if (jsonObj.data.retCode !== '1') {
+                               cmApi.prompt.toast(jsonObj.data.msg);
+                               refreshCaptcha();
+							   alert("图形验证码错误，请重发");
+                               return;
+                            }
+                            yysqParams.uuid = jsonObj.data.uuid;
+
+                        if(isyzm){
+	                             var params1 = {
+	  	                             "phoneNum": username,
+	  	                             "zznm": yysqParams.zznm,
+	  	                             "uuid":jsonObj.data.uuid
+	                             };
+
+	                        $.ajax({
+	                     	     type: "POST",
+	                     	     url: "https://hsn.sinograin.com.cn/slyyServlet/service/smscheck/sendSMSCode",
+	                     	     headers: {
+	                     	     	'Content-Type': 'application/x-www-form-urlencoded'
+	                     	     	},
+	                     	     data: jsonToUrlencoded(params1),
+	                     	     async:false,
+	                     	     success:function(data){
+	                     			console.log(data.data);
+	                                 if (data.data.resultCode == '1') {
+                                         console.log("验证码发送成功");
+                                         $$("#slyyThirdYzmSendBtn")[0].textContent=username;
+	                     				/*var userInput = prompt("请输验证码:"+username, "");
+	                     				yzm=userInput;
+	                     				yysqParams.dxyzm = yzm;   */              				
+	                     				console.log(yysqParams.uuid);
+                                        console.log(yysqParams.dxyzm);        
+                                     }                     
+	                            },	
+	                        })
+                        }else{
+                       	   console.log("此地无需手机验证码。。。");
+                       } 
+
+                       $$('#slyyThirdYzmPhoneInput').val(yysqParams.dxyzm);
+                       //jishiqi=setInterval(jiancha,1000);
+
+	                }	      
+	        })            
+    }
+
+
+function yzmDivYes() {                 
+            console.log(yysqParams.uuid);
+            console.log(yysqParams.dxyzm);        
+    }
+
+function yzmDivCancel() {                 
+           $$('#slyyThirdYzmDiv').css('display', 'none');        
+    }
+
+
+
+
+    
+ </script>
+
+
+
+</body>
+</html>
