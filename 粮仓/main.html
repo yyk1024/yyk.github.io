@@ -1123,7 +1123,9 @@ function denglu(){
         	getcph();        	
 
         }else{
-        	getcyr();
+        	if(yysqParams.userType!="01"){
+        		getcyr();
+        	}
         	getclxx();
         	getsearchliangku();
         	getzznm();
